@@ -96,7 +96,7 @@ The Docker image for this project has been successfully built and pushed to Dock
 **Docker Image:**
 
 
-### You can pull the image directly using:
+**You can pull the image directly using:**
 ```text
 docker pull pranalipawar/testapp
 ```
