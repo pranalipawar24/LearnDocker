@@ -48,32 +48,43 @@ I created this project to get hands-on experience with:
           ┌───────────────┐
           │ Mongo Express │
           └───────────────┘
+---
 
-The Dockerfile contains the instructions required to package the Node.js application.
+The **Dockerfile** contains the instructions required to package the Node.js application.
 
-Docker uses the Dockerfile to create an image, and the image is used to run the application inside a container.
+Docker uses the Dockerfile to create an **image**, and the image is used to run the application inside a **container**.
 
-MongoDB runs separately, while Mongo Express provides a simple web interface to view the database.
+MongoDB runs separately, while **Mongo Express** provides a simple web interface to view the database.
 
-🛠️ Tech Stack
-Technology	Purpose
-🟢 Node.js	Backend
-⚡ Express.js	Web server
-🍃 MongoDB	Database
-🖥️ Mongo Express	Database UI
-🐳 Docker	Containerization
-⚙️ Docker Compose	Manage containers
-🌐 HTML/CSS	Frontend
-🚀 Docker Workflow
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| 🟢 Node.js | Backend |
+| ⚡ Express.js | Web Server |
+| 🍃 MongoDB | Database |
+| 🖥️ Mongo Express | Database UI |
+| 🐳 Docker | Containerization |
+| ⚙️ Docker Compose | Manage Containers |
+| 🌐 HTML/CSS | Frontend |
+
+---
+
+# 🚀 Docker Workflow
+
+```text
 Code
- ↓
+  ↓
 Dockerfile
- ↓
+  ↓
 Docker Image
- ↓
+  ↓
 Docker Container
- ↓
+  ↓
 Running Application
+
 ▶️ Run the Project
 
 Build the Docker image:
