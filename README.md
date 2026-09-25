@@ -8,9 +8,9 @@ A simple **Node.js + MongoDB application** built to understand the fundamentals 
 
 ## 📌 About the Project
 
-This project demonstrates how a Node.js application can be containerized using Docker and connected with MongoDB.
+This project demonstrates how a **Node.js application** and **MongoDB** can be used with Docker.
 
-### What I learned
+I created this project to get hands-on experience with:
 
 - 🐳 Docker Images & Containers
 - 📦 Dockerfile
@@ -25,48 +25,58 @@ This project demonstrates how a Node.js application can be containerized using D
 ## 🏗️ How It Works
 
 ```text
-                     Dockerfile
-                         │
-                         ▼
-                  ┌─────────────┐
-                  │ Docker Image│
-                  └──────┬──────┘
-                         │
-                         ▼
-                  ┌─────────────┐
-                  │ Node.js     │
-                  │ Container   │
-                  └──────┬──────┘
-                         │
-                    Docker Network
-                         │
-                         ▼
-                  ┌─────────────┐
-                  │  MongoDB    │
-                  │  Container  │
-                  └──────┬──────┘
-                         │
-                         ▼
-                  ┌─────────────┐
-                  │Mongo Express│
-                  └─────────────┘
+                 Dockerfile
+                     │
+                     ▼
+              ┌─────────────┐
+              │ Docker Image│
+              └──────┬──────┘
+                     │
+                     ▼
+              ┌─────────────┐
+              │   Node.js   │
+              │  Container  │
+              └──────┬──────┘
+                     │
+               Docker Network
+                     │
+                     ▼
+              ┌─────────────┐
+              │   MongoDB   │
+              │  Container  │
+              └──────┬──────┘
+                     │
+                     ▼
+              ┌─────────────┐
+              │Mongo Express│
+              └─────────────┘
+```
 
-The Dockerfile contains the instructions required to package the Node.js application.
+The **Dockerfile** contains the instructions required to package the Node.js application.
 
-Docker uses the Dockerfile to create an image, and the image is used to run the application inside a container.
+Docker uses the Dockerfile to create an **image**, and the image is used to run the application inside a **container**.
 
-MongoDB runs in a separate container, while Mongo Express provides a simple web interface to view the database.
+MongoDB runs in a separate container, while **Mongo Express** provides a simple web interface to view the database.
 
-🛠️ Tech Stack
-Technology	Purpose
-🟢 Node.js	Backend
-⚡ Express.js	Web Server
-🍃 MongoDB	Database
-🖥️ Mongo Express	Database UI
-🐳 Docker	Containerization
-⚙️ Docker Compose	Manage Containers
-🌐 HTML/CSS	Frontend
-🚀 Docker Workflow
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| 🟢 Node.js | Backend |
+| ⚡ Express.js | Web Server |
+| 🍃 MongoDB | Database |
+| 🖥️ Mongo Express | Database UI |
+| 🐳 Docker | Containerization |
+| ⚙️ Docker Compose | Manage Containers |
+| 🌐 HTML/CSS | Frontend |
+
+---
+
+## 🚀 Docker Workflow
+
+```text
 Code
   ↓
 Dockerfile
@@ -76,18 +86,44 @@ Docker Image
 Docker Container
   ↓
 Running Application
-▶️ Run the Project
-Build the Docker Image
+```
+
+---
+
+## ▶️ Run the Project
+
+### 1️⃣ Build the Docker Image
+
+```bash
 docker build -t docker-testapp .
-Run the Application
+```
+
+### 2️⃣ Run the Application
+
+```bash
 docker run -d -p 5050:5050 --name docker-testapp docker-testapp
-Start MongoDB and Mongo Express
+```
+
+### 3️⃣ Start MongoDB and Mongo Express
+
+```bash
 docker compose -f mongodb.yaml up -d
-🌐 Access
-Service	URL
-🌐 Application	http://localhost:5050
-🖥️ Mongo Express	http://localhost:8081
-📂 Project Structure
+```
+
+---
+
+## 🌐 Access
+
+| Service | URL |
+|---------|-----|
+| 🌐 Application | http://localhost:5050 |
+| 🖥️ Mongo Express | http://localhost:8081 |
+
+---
+
+## 📂 Project Structure
+
+```text
 LearnDocker/
 │
 ├── public/
@@ -102,8 +138,24 @@ LearnDocker/
 ├── .dockerignore
 ├── .gitignore
 └── README.md
-🎯 Learning Goal
+```
 
-The main goal of this project is to understand how Docker can be used to package, run, and manage applications and databases in isolated containers.
+---
 
-This project provides hands-on experience with Docker images, containers, Dockerfiles, port mapping, Docker Compose, MongoDB, and Mongo Express
+## 🎯 Learning Goal
+
+The main goal of this project is to understand how Docker can be used to **package, run, and manage applications and databases in isolated containers**.
+
+This project provides hands-on experience with:
+
+- Docker Images
+- Docker Containers
+- Dockerfiles
+- Port Mapping
+- Docker Compose
+- MongoDB
+- Mongo Express
+
+---
+
+
