@@ -87,7 +87,18 @@ Docker Container
   ↓
 Running Application
 ```
+---
 
+## 🐳 Docker Hub
+
+The Docker image for this project has been successfully built and pushed to Docker Hub.
+
+**Docker Image:**
+
+```text
+You can pull the image directly using:
+docker pull pranalipawar/testapp
+```
 ---
 
 ## ▶️ Run the Project
